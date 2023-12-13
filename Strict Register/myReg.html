@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Form Validation using a sample registration form</title>
+  <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+  <meta name="description"
+    content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+  <link rel="stylesheet" href="myreg.css">
+  <link rel="stylesheet" href="myRegStyle.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <fieldset>
+
+      <legend>
+        <div class="msg">Create an Account
+          <div class="error"></div>
+        </div>
+
+      </legend>
+
+      <div class="center">
+        <img src="/login.PNG" alt="GOZKYBRAIN IZUKA">
+
+      </div>
+
+      <div class="field">
+
+
+        <form action="/testreg.html" class="form">
+
+          <div class="input-group">
+            <label for="username" class="label">Full Name</label>
+          
+
+            <input id="username" placeholder="Enter your Full Name" class="input" pattern="([A-Za-z ]){4,}" 
+              oninvalid="this.setCustomValidity('Your Name can not be empty')" required>
+            <span class="error-message"></span>
+            <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+
+          <div class="input-group">
+            <label for="email" class="label">Email</label>
+            <input id="email" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" class="input"
+              oninvalid="this.setCustomValidity('Email field can not be empty')" autocomplete
+              placeholder="Enter an Email Address" required>
+            <span class="error-message"></span>
+            <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+
+          <div class="input-group">
+            <label for="number" class="label">Phone Number</label>
+            <input id="number" placeholder="Enter a Valid Phone Number" class="input" pattern="([0-9]){5,}"
+            oninvalid="this.setCustomValidity('Your Number can not be empty')" required>
+            <span class="error-message"></span>
+            <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+
+          <div class="input-group">
+            <label for="password" class="label">Password</label>
+            <input type="password" oninvalid="this.setCustomValidity('Password should be at least 8 characters long')"
+              oniput="this.setCustomValidity('Password should be at least 8 characters long')" class="input"
+              id="password" name="password" required placeholder="Should contain uppercase, lowercase, and numbers"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+            <!-- <input id="password" type="password" class="input" placeholder="Only Numbers and Alphabets" > -->
+            <input type="checkbox" onclick="myFunction()">Show Password
+            <span class="error-message"></span>
+            <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+
+
+
+          <input type="submit" class="button" id="myCheckbox" onsubmit="myFunction3()" value="Create account">
+          <!-- <button type="submit" class="button">Create account</button> -->
+
+        </form>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <script src="myReg.js"></script>
+
+</body>
+
+</html>
